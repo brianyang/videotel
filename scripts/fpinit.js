@@ -1,3 +1,7 @@
+$('#play-video').click(function(){
+  alert('foo')
+  window.picker.play(uploadImg)
+})
 
 window.picker = function(){
   filepicker.pick({
@@ -9,7 +13,14 @@ window.picker = function(){
       // $('body').append(JSON.stringify(FPFile))
       var uploadImg = FPFile.url
       console.log(uploadImg)
-      $('body').append('<video src=' + uploadImg + '></video>')
+      //$('body').append('<video src=' + uploadImg + '></video>')
+      //$('#video1>source').attr('src', uploadImg)
+      alert(uploadImg)
+      _V_("video1").ready(function(){
+        var myPlayer = this;
+        myPlayer.src(uploadImg);
+        myPlayer.play()
+      });
     },
     function(FPError){
       console.log(FPError.toString());

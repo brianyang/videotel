@@ -1,16 +1,26 @@
 <!DOCTYPE HTML>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title></title>
+	<meta charset="UTF-8">
+	<title></title>
+<link href="http://vjs.zencdn.net/c/video-js.css" rel="stylesheet">
 </head>
-<body id=body-tag>
-  <div id="log">
-    <ul id="subscriptions"></ul>
-    <ul id="published"></ul>
-    <ul id="unsubscribed"></ul>
-  </div>
-  <script type="text/javascript" src=/scripts/pubsub.js></script>
-<script type="text/javascript" src=/scripts/sample.js></script>
+<body>
+
+<input type="text"/>
+ <video id="video1" class="video-js vjs-default-skin" controls
+  preload="auto" width="640" height="264" poster="my_video_poster.png"
+  data-setup="{}">
+  <source src="https://www.filepicker.io/api/file/kz7BaqyDRDuq1RDtCWNz" type='video/mp4'>
+</video>
+<script src="http://vjs.zencdn.net/c/video.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+<script src="https://api.filepicker.io/v1/filepicker.js"></script>
+<script type="text/javascript">
+    //Seting up Filepicker.io with your api key
+    filepicker.setKey('ArYkKhMH2Se6N2QgBEAjLz');
+</script>
+<script type="text/javascript" src=/scripts/fpinit.js></script>
+<a id=play-video href="#">Play Me!</a>
 </body>
 </html>
