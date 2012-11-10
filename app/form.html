@@ -1,0 +1,29 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+</head>
+<body id=body-tag>
+  <div id="log">
+    <ul id="subscriptions"></ul>
+    <ul id="published"></ul>
+    <ul id="unsubscribed"></ul>
+  </div>
+<form enctype="multipart/form-data" method="post">
+  <h2>Regular file upload</h2>
+  <input type="file"></input>
+  
+  <h2>capture=camera</h2>
+  <input type="file" accept="image/*;capture=camera"></input>
+  
+  <h2>capture=camcorder</h2>
+  <input type="file" accept="video/*;capture=camcorder"></input>
+  
+  <h2>capture=microphone</h2>
+  <input type="file" accept="audio/*;capture=microphone"></input>
+</form>
+  <script type="text/javascript" src=/scripts/pubsub.js></script>
+<script type="text/javascript" src=/scripts/sample.js></script>
+</body>
+</html>
